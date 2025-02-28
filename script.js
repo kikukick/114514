@@ -1,12 +1,9 @@
-const game = new Chess();
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
 
-const board = Chessboard('board', {
-    draggable: true,
-    position: 'start',
-    pieceTheme: './images/{piece}.png', // カスタム駒画像
-    onDrop: (source, target) => {
-        const move = game.move({ from: source, to: target, promotion: 'q' });
-
-        if (move === null) return 'snapback'; // 無効な動きなら戻す
-    }
-});
+#board {
+    width: 400px;
+    margin: 20px auto;
+}
